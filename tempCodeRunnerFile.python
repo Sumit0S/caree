@@ -1,0 +1,16 @@
+import pyperclip
+import pyautogui
+import time
+
+def type_clipboard_content(delay=0.05):
+    # Get the content from the clipboard
+    clipboard_content = pyperclip.paste()
+
+    # Wait for a few seconds to switch to the desired window
+    time.sleep(5)
+
+    # Type out the clipboard content
+    pyautogui.typewrite(clipboard_content, interval=delay)
+
+if __name__ == "__main__":
+    type_clipboard_content()
